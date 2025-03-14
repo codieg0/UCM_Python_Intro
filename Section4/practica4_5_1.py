@@ -4,19 +4,6 @@ y como valores los nombres de los mismos números en inglés (one, two, …).
 Después pide al usuario números en español y muéstrale su traducción al inglés.
 '''
 
-espanol = {
-    1 : 'uno',
-    2 : 'dos',
-    3 : 'tres',
-    4 : 'cuatro',
-    5 : 'cinco',
-    6 : 'seis',
-    7 : 'siete',
-    8 : 'ocho',
-    9 : 'nueve',
-    10 : 'diez'
-}
-
 ingles = {
     1 : 'one',
     2 : 'two',
@@ -37,4 +24,4 @@ numero = int(input('Un numero del 1 al 10: '))
 if numero in espanol:
     print(f'El numero {numero} es {ingles[numero]} en ingles.')
 else: 
-    print(f'No se ese {numero}.')
+    print(f'No se el numero {numero}.')
