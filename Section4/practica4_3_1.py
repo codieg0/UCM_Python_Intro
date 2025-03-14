@@ -27,11 +27,12 @@ print('Ahora vas a eliminar una position.')
 for position, value in enumerate(lista_palabra):
     print(position, value)
 
-elegir = int(input('Elige el numero que quieres eliminar: '))
+elegir = int(input('Elige la posicion que quieres eliminar: '))
 
-while elegir != 0 and elegir != 5:
+while 0 <= elegir > 5:
     elegir = int(input('Elige el numero que quieres eliminar: '))
 else:
     print(f'Vale. Se eliminara la posicion {elegir} que seria la palabra {lista_palabra[elegir]}')
     del lista_palabra[elegir]
-    print(f'La nueva lista es {lista_palabra}')
+
+print(f'La nueva lista es {lista_palabra}')
