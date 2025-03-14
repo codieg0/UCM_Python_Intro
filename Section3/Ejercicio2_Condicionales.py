@@ -15,51 +15,29 @@ No conozco ese mes
 El nombre del mes debe aparecer exactamente como lo escribió el usuario al indicar el número de días.
 
 Cuando termines el ejercicio, entrega el fichero .py con el código del programa a través del Campus para que te lo corrijamos. La entrega para este ejercicio se llama Entrega del Ejercicio 2.
-'''
 
-# Escribimos los meses y le asignamos el numero de dias
-enero = 31
-febrero = 28
-marzo = 31
-abril = 30
-mayo = 31
-junio = 30
-julio = 31
-agosto = 31
-septiembre = 30
-octubre = 31
-noviembre = 30
-diciembre = 31
+# Correccion
+
+- Agrupa los meses que tienen el mismo número de días usando condiciones compuestas para conseguir que el programa quede más compacto. Si lo piensas con cuidado, sólo hay 4 posibilidades.
+
+- En este caso no tiene sentido usar variables con el número de días porque sólo se utilizan en un punto del programa y no es un valor que vaya a cambiar. Escribe directamente el número de días en el mensaje.
+
+TIENES QUE REPETIR EL EJERCICIO. Envía una nueva versión teniendo en cuenta los comentarios de la corrección, por favor.
+'''
 
 # Pedimos al usuario que escriba el mes. Recordar que el mes debe aparecer exactamente como lo escribió el usuario
 
 mes = input('Introduzca el nombre del mes: ')
-
 nuevo_mes = mes.lower()
 
-if nuevo_mes == 'enero':
-    print(f'El mes de {mes} tiene {enero} dias.')
+if nuevo_mes == 'enero' or nuevo_mes == 'marzo' or nuevo_mes == 'mayo'\
+    or nuevo_mes == 'julio' or nuevo_mes == 'agosto' \
+    or nuevo_mes == 'octubre' or nuevo_mes == 'diciembre':
+    print(f'Es mes de {mes} tiene 31 dias.')
 elif nuevo_mes == 'febrero':
-    print(f'El mes de {mes} tiene {febrero} dias')
-elif nuevo_mes == 'marzo':
-    print(f'El mes de {mes} tiene {marzo} dias.')
-elif nuevo_mes == 'abril':
-    print(f'El mes de {mes} tiene {abril} dias.')
-elif nuevo_mes == 'mayo':
-    print(f'El mes de {mes} tiene {mayo} dias.')
-elif nuevo_mes == 'junio':
-    print(f'El mes de {mes} tiene {junio} dias.')
-elif nuevo_mes == 'julio':
-    print(f'El mes de {mes} tiene {julio} dias.')
-elif nuevo_mes == 'agosto':
-    print(f'El mes de {mes} tiene {agosto} dias.')
-elif nuevo_mes == 'setptiembre':
-    print(f'El mes de {mes} tiene {septiembre} dias.')
-elif nuevo_mes == 'octubre':
-    print(f'El mes de {mes} tiene {octubre} dias.')
-elif nuevo_mes == 'noviembre':
-    print(f'El mes de {mes} tiene {noviembre} dias.')
-elif nuevo_mes == 'diciembre':
-    print(f'El mes de {mes} tiene {diciembre} dias.')
+    print(f'El mes de {mes} tiene 28 dias.')
+elif nuevo_mes == 'abril' or nuevo_mes == 'junio' or nuevo_mes == 'septiembre'\
+    or nuevo_mes == 'noviembre':
+    print(f'El mes de {mes} tiene 30 dias.')
 else:
-    print('No conozco ese mes.')
+    print(f'No conozco el mes de {mes}')
