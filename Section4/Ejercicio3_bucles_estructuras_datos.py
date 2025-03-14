@@ -65,4 +65,5 @@ while preguntar == 'si':
     lugar = input('Lugar del gasto: ')
     cantidad = float('Cantidad gastada: ')
 
-    
+    dict_gastos = [motivo, lugar, cantidad]
+    gastos.append(dict_gastos)
