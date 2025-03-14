@@ -32,4 +32,9 @@ ingles = {
 
 # Pedir al usuario un numero en espanol y mostrarle la traduccion al ingles
 
-numero = int(input('Un numeero del 1 al 10: '))
+numero = int(input('Un numero del 1 al 10: '))
+
+if numero in espanol:
+    print(f'El numero {numero} es {ingles[numero]} en ingles.')
+else: 
+    print(f'No se ese {numero}.')
