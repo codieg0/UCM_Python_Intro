@@ -61,9 +61,21 @@ preguntar = input('Quieres introducir más gastos (si/no): ')
 preguntar.lower()
 
 while preguntar == 'si':
+
     motivo = input('Motivo del gasto: ')
     lugar = input('Lugar del gasto: ')
-    cantidad = float('Cantidad gastada: ')
+    cantidad = float(input('Cantidad gastada: '))
 
-    dict_gastos = [motivo, lugar, cantidad]
+    dict_gastos = {'motivo' : motivo, 'lugar' : lugar, 'cantidad' :cantidad}
     gastos.append(dict_gastos)
+
+    preguntar = input('Quieres introducir más gastos (si/no): ')
+    preguntar.lower()
+
+    if preguntar == 'no':
+        print('Gastos:')
+        for gasto in gastos:
+            print(f'{gasto["motivo"]} en {gasto["lugar"]}: {gasto["cantidad"]} euros')
+
+        total = sum(gasto["cantidad"] for gasto in gastos)
+        print(f'Cantidad total : {total} euros.')
