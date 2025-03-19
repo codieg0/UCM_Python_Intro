@@ -55,11 +55,33 @@ a través del Campus para que te lo corrijamos.
 La entrega para este ejercicio se llama Entrega del Ejercicio 3
 '''
 
+
+'''
+- La instrucción
+
+preguntar.lower()
+devuelve una cadena en minúsculas que se pierde porque no se guarda en ningún sitio. Puedes escribir:
+
+preguntar = preguntar.lower()
+o bien
+
+preguntar = input('Quieres introducir más gastos (si/no): ').lower()
+- La parte que trata el "no" debería estar fuera del primer bucle. Conceptualmente el primer bucle recopila los datos y el segundo los muestra después. Imprescindible.
+
+- Puedes usar la función sum, pero también puedes ir acumulando las cantidades en la variable total una a una dentro del bucle for. Lo que prefieras.
+
+- Tienes que documentar el código escribiendo un comentario breve antes de cada bloque. Imprescindible.
+ 
+TIENES QUE REPETIR EL EJERCICIO. Envía una nueva versión teniendo en cuenta los comentarios de la corrección, por favor.
+'''
 gastos = []
 
 preguntar = input('Quieres introducir más gastos (si/no): ')
-preguntar.lower()
+preguntar = preguntar.lower()
 
+# en este bucle, lo que hacemos es anadir los datos motivo,lugar y cantidad...
+# si el usuario responde que si
+# tambien creamos un dictionario anadiendo estos datos y hacemos un append a la lista vacia gastos
 while preguntar == 'si':
 
     motivo = input('Motivo del gasto: ')
@@ -70,12 +92,11 @@ while preguntar == 'si':
     gastos.append(dict_gastos)
 
     preguntar = input('Quieres introducir más gastos (si/no): ')
-    preguntar.lower()
+    preguntar = preguntar.lower()
 
-    if preguntar == 'no':
-        print('Gastos:')
-        for gasto in gastos:
-            print(f'{gasto["motivo"]} en {gasto["lugar"]}: {gasto["cantidad"]} euros')
-
-        total = sum(gasto["cantidad"] for gasto in gastos)
-        print(f'Cantidad total : {total} euros.')
+if preguntar == 'no':
+    print('Gastos:')
+    for gasto in gastos:
+        print(f'{gasto["motivo"]} en {gasto["lugar"]}: {gasto["cantidad"]} euros')
+    total = sum(gasto["cantidad"] for gasto in gastos)
+    print(f'Cantidad total : {total} euros.')
