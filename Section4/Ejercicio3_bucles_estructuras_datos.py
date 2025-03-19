@@ -76,6 +76,9 @@ TIENES QUE REPETIR EL EJERCICIO. Envía una nueva versión teniendo en cuenta lo
 '''
 gastos = []
 
+# Preguntamos al ususario si quiere anadir mas datos
+# No importa si es Si,sI,SI o no,No,NO
+# la funcion lower() lo convertira todo a minusculas
 preguntar = input('Quieres introducir más gastos (si/no): ')
 preguntar = preguntar.lower()
 
